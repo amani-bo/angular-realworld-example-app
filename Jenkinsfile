@@ -24,7 +24,7 @@ pipeline {
             }
         }
         stage ('Execute CI pipeline') {
-            agent {
+            agent any{
                 docker { image 'node:12-buster-slim' }
             }
             stages{
